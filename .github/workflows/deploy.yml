@@ -34,8 +34,9 @@ jobs:
           python-version: '3.10'
 
       - name: Install FFmpeg
+        shell: bash-wrapper {0}
         run: |
-          ./build.sh
+           bash build.sh
 
       - name: Serverless deploy
         uses: serverless/github-action@v3.2
