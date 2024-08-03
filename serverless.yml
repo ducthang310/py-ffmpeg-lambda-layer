@@ -10,7 +10,7 @@ provider:
 layers:
   python-ffmpeg:
     path: lambda-layer
-    name: ffmpeg
+    name: python-ffmpeg
     description: ffmpeg layer for Python functions (python3.10)
     compatibleRuntimes:
       - python3.10
@@ -19,9 +19,3 @@ layers:
 
 package:
   individually: true
-  exclude:
-    - node_modules/**
-    - cache/**
-    - test/**
-    - .git/**
-    - .github/**
