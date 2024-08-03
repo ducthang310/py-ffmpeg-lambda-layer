@@ -8,8 +8,8 @@ provider:
   region: us-east-1
 
 layers:
-  python-ffmpeg:
-    path: lambda-layer
+  ffmpeg:
+    path: layer
     name: python-ffmpeg
     description: ffmpeg layer for Python functions (python3.10)
     compatibleRuntimes:
