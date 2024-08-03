@@ -1,0 +1,27 @@
+service: py-ffmpeg-lambda-layer
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: python3.10
+  region: us-east-1
+
+layers:
+  python-ffmpeg:
+    path: lambda-layer
+    name: ffmpeg
+    description: ffmpeg layer for Python functions (python3.10)
+    compatibleRuntimes:
+      - python3.10
+    compatibleArchitectures:
+      - x86_64
+
+package:
+  individually: true
+  exclude:
+    - node_modules/**
+    - cache/**
+    - test/**
+    - .git/**
+    - .github/**
